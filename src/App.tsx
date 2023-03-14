@@ -25,12 +25,12 @@ function App() {
         </a>
       </header>
       <section>
-        <input type="number" value={a} onChange={(e) => setA(+e.target.value)} />
-        <input type="number" value={b} onChange={(e) => setB(+e.target.value)} />
-        <button onClick={() => setResult(add(a, b))}>Add</button>
-        <button onClick={() => setResult(sub(a, b))}>Sub</button>
+        <input data-tn="addInput" type="number" value={a} onChange={(e) => setA(+e.target.value)} />
+        <input data-tn="subInput" type="number" value={b} onChange={(e) => setB(+e.target.value)} />
+        <button data-tn="addBtn" onClick={() => setResult(add(a, b))}>Add</button>
+        <button data-tn="subBtn" onClick={() => setResult(sub(a, b))}>Sub</button>
       </section>
-      <section>Result: {result}</section>
+      <section data-tn="result">Result: {result}</section>
     </div>
   );
 }
